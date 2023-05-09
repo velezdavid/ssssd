@@ -68,3 +68,20 @@ docker run -p 3000:3000 books-jose-moreira:latest
 docker build -t books-jose-moreira:test .
 docker run -p 3000:3000 books-jose-moreira:test
 ```
+
+## Uso de la imagen
+
+La imagen de Docker se encuentra disponible en Docker Hub con los siguientes nombres:
+
+```
+velezdavid/kma-notas-nodejs:rest: contiene la imagen del servicio REST.
+velezdavid/kma-notas-nodejs:test: contiene la imagen con las pruebas unitarias del servicio REST.
+```
+
+Para ejecutar la imagen se puede utilizar el siguiente comando:
+
+```
+docker run -p 3000:3000 velezdavid/kma-notas-nodejs:rest
+```
+
+<img src="./img/docker.png" alt="hub">
