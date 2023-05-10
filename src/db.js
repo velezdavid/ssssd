@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 
 const MONGODB_URI =
-  "mongodb+srv://facci:facci@cluster0.kidus.mongodb.net/books";
+  "mongodb+srv://facci:facci@cluster0.kidus.mongodb.net/ControlIdioma";
 
 mongoose.connect(
   MONGODB_URI,

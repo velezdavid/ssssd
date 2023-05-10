@@ -23,21 +23,28 @@ El servicio estará disponible en `http://localhost:3000`.
 
 ### Endpoints
 
-- `GET /books`: Obtiene todos los libros
-- `GET /books/:id`: Obtiene un libro por su ID
-- `POST /books`: Crea un nuevo libro
+- `GET /control-idioma`: Obtiene todos los libros
+- `GET /control-idioma/:id`: Obtiene un libro por su ID
+- `POST /control-idioma`: Crea un nuevo libro
+- `PUT /control-idioma`: Actualiza un libro
+- `DELETE /control-idioma`: Elimina un libro
 
 ### Ejemplo de solicitud HTTP
 
 ```
-POST /books HTTP/1.1
+POST /control-idioma HTTP/1.1
 Host: localhost:3000
 Content-Type: application/json
 
+
+
 {
-    "title": "Mi libro",
-    "author": "Yo mismo",
-    "year": 2021
+    "ID_estudiante": 1,
+    "ID_idioma": 1,
+    "porcentaje_lectura": "55%",
+    "porcetaje_escritura":  "33%",
+    "porcetaje_escuchar_hablar": "44%"
+
 }
 ```
 
@@ -62,11 +69,11 @@ Se ha utilizado Docker para la dockerización del servicio REST y sus pruebas. S
 <img src="./img/docker.png" alt="Docker">
 
 ```
-docker build -t books-jose-moreira:latest .
-docker run -p 3000:3000 books-jose-moreira:latest
+docker build -t control-idioma-jose-moreira:latest .
+docker run -p 3000:3000 control-idioma-jose-moreira:latest
 
-docker build -t books-jose-moreira:test .
-docker run -p 3000:3000 books-jose-moreira:test
+docker build -t control-idioma-jose-moreira:test .
+docker run -p 3000:3000 control-idioma-jose-moreira:test
 ```
 
 ## Uso de la imagen

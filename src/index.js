@@ -3,13 +3,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./db");
-const bookRoutes = require("./routes/bookRoutes");
+const ControlIdiomaRoutes = require("./routes/controlIdiomaRoutes");
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/books", bookRoutes);
+app.use("/control-idioma", ControlIdiomaRoutes);
 
 const PORT = 3000;
 
